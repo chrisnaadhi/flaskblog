@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+    <title>Create Post | Your Blog</title>
+{% endblock head %}
+
+{% block body %}
+    <h1>Create a New Blog Post: </h1>
+    <hr>
+        <form action='/posts/create' method='POST'>
+        <div class="mb-2">
+            <label for="inputTitle" class="form-label">Title :</label> 
+            <input type="text" class="form-control" name="title" id="title">
+        </div>
+        <br>
+        <div class="mb-2">
+            <label for="inputAuthor" class="form-label">Author :</label>
+            <input type="text" class="form-control" name="author" id="author">
+        </div>
+        <br>
+        <div class="mb-2">
+            <label for="inputContent" class="form-label">Content :</label>
+            <input type="text" class="form-control" name="content" id="content"></input>
+        </div>
+        <br>
+        <input type="submit" value="Post" class="btn btn-success">
+        </form>
+    <hr>
+    <h1>Or You can view some posts:</h1>
+    <hr>
+    {% for post in posts %}
+        <h2>{{ post.title }}</h2>
+        <h6>Posted: {{ post.date_posted.strftime("%a, %d %B %Y | %X") }}</h6>
+        {% if post.author %}
+            <h5> Author: {{ post.author }}</h5>
+        {% else %}
+            <h5>Author: Unknown</h5>
+        {% endif %}
+            
+        <p>{{ post.content }}</p>
+        <a href="/posts/edit/{{ post.id }}"><button class="btn btn-primary" type="button">Edit</button></a>
+        <a href="/posts/delete/{{ post.id }}"><button class="btn btn-danger" type="button">Delete</button></a>
+        <hr>
+    {% endfor %}
+        
+{% endblock body %}

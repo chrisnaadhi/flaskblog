@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+    <title>Edit Post | Your Blog</title>
+{% endblock head %}
+
+
+{% block body %}
+<h1>Edit Post</h1>
+<hr>
+    <h2>Edit your Blog Post:</h2>
+    <form action='/posts/edit/{{ post.id }}' method='POST'>
+        <div class="mb-2">
+            <label for="inputTitle" class="form-label">Title :</label> 
+            <input type="text" class="form-control" name="title" id="title" value="{{ post.title }}">
+        </div>
+    <br>
+    <div class="mb-2">
+        <label for="inputTitle" class="form-label">Author :</label> 
+        <input type="text" class="form-control" name="author" id="author" value="{{ post.author }}">
+    </div>
+    <br>
+    <div class="mb-2">
+        <label for="inputTitle" class="form-label">Content :</label> 
+        <input type="text" class="form-control" name="content" id="content" value="{{ post.content }}">
+    </div>
+    <br>
+        <div class="d-grid gap-2 d-md-block">
+            <input type="submit" value="Save" class="btn btn-success">
+            <a href="/posts"><button type="button" class="btn btn-outline-secondary">Cancel</button></a>
+        </div>
+    </form>
+    <br>
+{% endblock body %}

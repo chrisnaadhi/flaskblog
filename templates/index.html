@@ -2,11 +2,70 @@
 
 
 {% block head %}
-    <h1>Welcome</h1>
+<style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  <title>Your Blog - Chrisna's Project</title>
 {% endblock head %}
-    
+
 
 {% block body %}
-    
+<div class="banner-index">
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Flask CRUD Project</h1>
+        <p class="lead text-muted">A Project to learn and implement CRUD Method to a Web Blog with Flask Framework</p>
+        <p>
+          <a href="/posts/create" class="btn btn-primary my-2">Create a Post</a>
+          <a href="/posts" class="btn btn-secondary my-2">View Posts</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="container marketing">
+    <hr>
+    <h2 class="fw-light" style="text-align: center;">Build with ♥</h2>
+    <hr>
+    <!-- Three columns of text below the carousel -->
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col-lg-4 h-110">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Python_logo_and_wordmark.svg/1280px-Python_logo_and_wordmark.svg.png" alt="" class="card-img-top" height="125">
+        <div class="card-body">
+        <h2>Python</h2>
+        <p>Python Programming Language</p>
+        <p><a class="btn btn-outline-dark" href="https://python.org/" role="button" target="_blank">View details &raquo;</a></p>
+        </div>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4 h-110">
+        <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-official.svg" alt="" class="card-img-top" height="125">
+        <div class="card-body">
+        <h2>Flask</h2>
+        <p>Micro Framework</p>
+        <p><a class="btn btn-outline-dark" href="https://flask.palletsprojects.com/" role="button" target="_blank">View details &raquo;</a></p>
+        </div>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4 h-110">
+        <img src="https://www.xhyte.com/whmcs/templates/xhyte/logos/9.png" class="card-img-top" height="125">
+        <div class="card-body">
+        <h2>Bootstrap</h2>
+        <p>Bootstrap Styling</p>
+        <p><a class="btn btn-outline-dark" href="https://getbootstrap.com/" role="button" target="_blank">View details &raquo;</a></p>
+      </div>
+      </div><!-- /.col-lg-4 -->
+</div><!-- /.row -->
 {% endblock body %}
-    
